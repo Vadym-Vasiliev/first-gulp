@@ -14,7 +14,11 @@ export const html = () => {
         })
       )
     )
-    .pipe(fileInclude())
+    .pipe(
+      fileInclude({
+        indent: true,
+      })
+    )
     .pipe(
       pug({
         //Стискання HTML файла
